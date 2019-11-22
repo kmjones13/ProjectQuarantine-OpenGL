@@ -1,0 +1,18 @@
+#version 150
+in vec3 a_position;
+
+uniform vec3 eyePos;
+uniform mat4 viewMatrix;
+uniform mat4 projMatrix;
+
+out vec3 v_out;
+
+void main()
+{
+    vec4 p = vec4(a_position,1.0);
+    v_out=a_position;
+    p.xyz += eyePos.xyz;
+    p.w=1.0;
+    gl_Position = p * (viewMatrix*projMatrix);
+    gl_Position.z = gl_Position.w;
+}

@@ -1,0 +1,71 @@
+newmtl MainDude_Shoot_5:Material_brass
+illum 4
+Kd 0.80 0.80 0.32
+Ka 0.32 0.36 0.28
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.40 1.40 1.12
+Ns 37.25
+newmtl MainDude_Shoot_5:Material_bronze
+illum 4
+Kd 0.47 0.40 0.28
+Ka 0.14 0.10 0.03
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.55 0.48 0.36
+Ns 47.06
+newmtl MainDude_Shoot_5:Material_ceramic_
+illum 4
+Kd 0.07 0.08 0.18
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.14 0.14 0.20
+Ns 56.86
+newmtl MainDude_Shoot_5:Material_chrome2
+illum 4
+Kd 0.90 0.95 1.00
+Ka 0.85 0.85 0.85
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.02 1.02 1.02
+Ns 1000.00
+newmtl MainDude_Shoot_5:Material_copper
+illum 4
+Kd 0.57 0.36 0.14
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.68 1.21 0.32
+Ns 49.02
+newmtl MainDude_Shoot_5:Material_cotton
+illum 4
+Kd 0.56 0.25 0.25
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 29.41
+newmtl MainDude_Shoot_5:Material_iron
+illum 4
+Kd 0.48 0.48 0.40
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 194.12
+newmtl MainDude_Shoot_5:Material_wood2
+illum 4
+Kd 0.30 0.14 0.14
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 194.12
+newmtl MainDude_Shoot_5:lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd charactertex.jpg
+Ni 1.00

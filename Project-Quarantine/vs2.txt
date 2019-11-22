@@ -1,0 +1,22 @@
+#version 150
+
+in vec3 a_position;
+in vec2 a_texcoord;
+in vec3 a_normal;
+
+out vec4 v_texcoord;
+out vec4 v_worldPos;
+out vec4 v_normal;
+
+uniform mat4 projMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 worldMatrix;
+
+void main(){
+    vec4 p = vec4(a_position,1.0) * worldMatrix;
+    vec4 n = vec4(a_normal,0.0) * worldMatrix;
+    v_normal=n;
+    v_worldPos = p;
+    v_texcoord.st=a_texcoord;
+    gl_Position = p * viewMatrix *projMatrix ;
+}

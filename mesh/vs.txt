@@ -1,0 +1,48 @@
+// GLSL: vertex shader
+#version 150
+
+in vec3 position;
+in vec2 texcoord;
+in vec3 normal;
+
+out vec2 v_texcoord;
+out vec3 v_normal;
+out vec3 v_pw;
+//out float v_depth;
+
+uniform mat4 projMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 worldMatrix;
+uniform float billboard;
+
+uniform vec3 cameraU;
+uniform vec3 cameraV;
+uniform vec3 cameraW;
+
+void main(){
+
+    v_texcoord = texcoord;
+    
+    if( billboard == 0.0 ){
+        vec4 p = vec4( position.xyz, 1.0 );
+        p = p * worldMatrix;
+        v_pw = p.xyz;
+        p = p * viewMatrix;
+        //v_depth = -p.z;
+        p = p * projMatrix;
+        gl_Position = p;
+        v_normal = (vec4(normal,0.0) * worldMatrix).xyz;
+        
+    }
+    else{
+        vec4 p = vec4(position.xyz, 1.0 );
+        p = p * worldMatrix;
+        vec2 offset = 2.0*(v_texcoord.st - vec2(0.5));
+        p.xyz += offset.x * cameraU.xyz + offset.y * cameraV.xyz;
+        p = p * viewMatrix;
+        //v_depth = -p.z;
+        p = p * projMatrix;
+        gl_Position = p;
+        v_normal = vec3(0,0,0); //not relevant
+    }
+}

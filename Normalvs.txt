@@ -1,0 +1,45 @@
+in vec2 a_position;
+
+uniform mat4 viewMatrix;
+uniform mat4 projMatrix;
+uniform sampler2D htex;
+uniform vec3 Min,Max;
+
+
+uniform vec2 resolution;
+
+
+out vec3 v_pw;
+out vec3 v_normal;
+
+
+void main(){
+
+	ivec2 ipos = ivec2(a_position);
+	vec3 p = point(ipos);
+	v_pw = p.xyz;
+	gl_Position = vec4(p,1.0) * viewMatrix * projMatrix;
+	
+	vec3 east = point( ipos + ivec2(1,0) );
+	vec3 south = point( ipos + ivec2(0,1) );
+	vec3 north = point( ipos + ivec2(0,-1) );
+	vec3 west = point( ipos + ivec2(-1,0) );
+	vec3 v1 = (east-p);
+	vec3 v2 = (south-p);
+	vec3 v3 = (west-p);
+	vec3 v4 = (north-p);
+	vec3 cp1 = cross(v2,v1);
+	vec3 cp2 = cross(v4,v3);
+	//averaging makes it look better
+	v_normal = 0.5*(cp1+cp2);
+
+}
+
+
+
+
+vec3 point(ivec2 coord){
+    float y = texelFetch( htex, coord.xy,0).r;
+    vec2 tmp = coord / resolution;
+    return Min + vec3(tmp[0],y,tmp[1]) * (Max-Min);
+}

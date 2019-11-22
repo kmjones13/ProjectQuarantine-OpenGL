@@ -1,0 +1,15 @@
+
+
+varying float v_viewPosz;
+varying vec3 v_worldpos;
+
+uniform vec4 lightPos;
+uniform vec3 lightHitherYon; 
+
+void main(){
+    float z = v_viewPosz;
+    //float z = v_worldpos.z+lightPos.z;
+    //float z = length( v_worldpos.xyz - lightPos.xyz );
+    z = (z - lightHitherYon[0])/(lightHitherYon[1]-lightHitherYon[0]);
+    gl_FragColor=vec4(z,z,z,1.0);
+}

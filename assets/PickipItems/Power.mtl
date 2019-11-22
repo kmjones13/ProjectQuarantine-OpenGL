@@ -1,0 +1,36 @@
+newmtl Battery1_pack:None
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Battery1.png
+Ni 1.00
+Ks 0.80 0.80 0.80
+Ns 0.00
+newmtl lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd AlienUV.png
+Ni 1.00
+newmtl medi:Box
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd medi.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks medi_SPEC.png
+Ns 96.08
+newmtl medi:Box_NONE
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd medi.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks medi_SPEC.png
+Ns 96.08

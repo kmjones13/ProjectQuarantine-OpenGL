@@ -1,0 +1,43 @@
+#version 430
+
+in vec4 a_position;
+
+layout(std430,binding=0) buffer P{
+    vec4 curr[];
+};
+
+uniform mat4 worldMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 projMatrix;
+uniform ivec2 resolution;
+
+out vec4 v_pw;
+out vec4 v_normal;
+out vec4 v_pp;
+
+
+int index(int row, int col){
+    return row*resolution[0]+col;
+}
+
+void main(){
+
+    int row = int(a_position.z);
+    int col = int(a_position.w);
+    vec4 tmp = curr[index(row,col)];
+    vec4 p;
+    p.xz = a_position.xy;
+    p.y = tmp.a;
+    vec4 n;
+    n.xyz = tmp.xyz;
+    p.w = 1.0;
+    n.w = 0.0;
+    p = p * worldMatrix;
+    n = n * worldMatrix;
+    v_pw = p;
+    v_normal = n;
+    p = p * viewMatrix * projMatrix;
+    v_pp = p;
+    gl_Position = p;
+}
+    

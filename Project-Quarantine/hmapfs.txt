@@ -1,0 +1,28 @@
+#version 430
+
+uniform vec3 lightPos;
+uniform vec4 lightColor;
+uniform vec3 eyePos;
+
+in vec3 v_pw;
+in vec3 v_normal;
+in  vec2 debug;
+
+out vec4 color;
+
+void main(){        
+
+//color = vec4(ivec2(debug)%ivec2(2),0,1);
+if( min(debug[0],debug[1]) < 0.01 ){
+    color = vec4(1,0,1,1);
+    return;
+}
+
+    vec3 L = lightPos.xyz - v_pw.xyz;
+    L=normalize(L);
+    vec3 N = v_normal.xyz;
+    N=normalize(N);
+    float dp = dot(L,N);
+    color = vec4(dp,dp,dp,1.0);
+    return;
+}

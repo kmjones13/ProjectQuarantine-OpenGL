@@ -1,0 +1,17 @@
+newmtl Material_TF_2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl Material_TF_66049
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd PineBranch.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08

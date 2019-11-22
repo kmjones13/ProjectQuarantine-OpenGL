@@ -1,0 +1,27 @@
+#version 150
+layout(points) in;
+layout(triangle_strip,max_vertices=4) out;
+out vec2 g_texcoord;
+//in float v_life;
+
+uniform mat4 viewMatrix;
+uniform mat4 projMatrix;
+uniform vec3 eyePos;
+#define PSIZE 0.4
+void main(){
+    vec4 p = gl_in[0].gl_Position;
+    p = p * viewMatrix;
+    //must do as backwards N shape... |/|
+    g_texcoord = vec2(0,1);
+    gl_Position = (p + vec4(-PSIZE,PSIZE,0,0) ) * projMatrix;
+    EmitVertex();
+    g_texcoord = vec2(0,0);
+    gl_Position = (p + vec4(-PSIZE,-PSIZE,0,0) ) * projMatrix;
+    EmitVertex();
+    g_texcoord = vec2(1,1);
+    gl_Position = (p + vec4(PSIZE,PSIZE,0,0) ) * projMatrix;
+    EmitVertex();
+    g_texcoord = vec2(1,0);
+    gl_Position = (p + vec4(PSIZE,-PSIZE,0,0) ) * projMatrix;
+    EmitVertex();
+}

@@ -1,0 +1,72 @@
+//GLSL: Fragment shader
+#version 150
+
+#define MAX_LIGHTS 2
+
+struct Light{
+    vec3 pos;
+    vec3 color;
+    float positional;       //0=directional, 1.0=positional
+    float cos_sa;           //cosine of spot angle
+    float A0;               //attenuation: constant
+    float A1;               //attenuation: linear
+    float A2;               //attenuation: quadratic
+};
+
+uniform sampler2D texture;
+uniform float billboard;
+uniform float unlit;
+uniform float alpha;
+
+uniform Light lights[MAX_LIGHTS];
+
+uniform vec3 eyePos;
+
+in vec2 v_texcoord;
+in vec3 v_normal;
+in vec3 v_pw;
+//in float v_depth;
+
+out vec4 color;
+
+void main(){
+    vec4 tc = texture2D(texture,v_texcoord);
+    
+    if( unlit == 0.0 ){
+        vec3 dpsum = vec3(0,0,0);
+        vec3 spsum = vec3(0,0,0);
+        vec3 N = normalize(v_normal);
+        vec3 V = normalize(eyePos - v_pw);
+        for(int i=0;i<MAX_LIGHTS;++i){
+            vec3 L = (lights[i].pos - v_pw * lights[i].positional);
+            float Ldist = length(L);
+            L = 1.0/Ldist * L;
+            float dp = dot(L,N);
+            dp = clamp(dp,0.0,1.0);
+            vec3 R = reflect(-L,N);
+            float sp = dot(V,R);
+            sp *= sign(dp);
+            sp = pow(sp,32.0); 
+            sp = clamp(sp,0.0,1.0);
+            
+            float attenfac = 1.0/(lights[i].A0+Ldist*(lights[i].A1+Ldist*lights[i].A2));
+            
+            dp *= attenfac;
+            sp *= attenfac;
+            
+            dpsum += dp * lights[i].color;
+            spsum += sp * lights[i].color;
+            
+            //FIXME: Need to do spotlight...
+        }
+        color = vec4( dpsum*tc.rgb + spsum  ,tc.a*alpha);
+        return;
+    }
+    else{
+        color = vec4( tc.rgb, tc.a*alpha);
+        return;
+    }
+
+	//gl_FragDepth = v_depth;
+}
+

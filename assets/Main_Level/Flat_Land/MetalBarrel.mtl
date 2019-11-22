@@ -1,0 +1,105 @@
+newmtl GDude:Material
+illum 4
+Kd 0.64 0.64 0.64
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl GDude:lambert2SG
+illum 4
+Kd 0.74 0.45 0.24
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl GDude:lambert3SG
+illum 4
+Kd 0.00 0.00 0.35
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl GDude:lambert4SG
+illum 4
+Kd 0.46 0.00 1.00
+Ka 0.21 0.21 0.21
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl GDude:lambert5SG
+illum 4
+Kd 0.01 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.40 0.40 0.40
+Ns 0.06
+newmtl GDude:lambert9SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl GDude:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 18.00
+newmtl GDude:phong1SG2
+illum 4
+Kd 0.01 0.00 0.31
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl GDude:phong2SG
+illum 4
+Kd 0.02 0.02 0.02
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.48 0.48 0.48
+Ns 0.06
+newmtl GDude:phong9SG
+illum 4
+Kd 0.12 0.12 0.12
+Ka 0.49 0.49 0.49
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.74 0.74 0.74
+Ns 0.00
+newmtl lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Ground.png
+Ni 1.00
+newmtl lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Dead_Tree_Endbranch-diff.jpg
+Ni 1.00
+newmtl lambert6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Dead_Tree_StrippedBrown-diff.jpg
+Ni 1.00
+newmtl lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd barrel2_DIF.jpg
+Ni 1.00
+newmtl lambert8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd barrel_water.PNG
+Ni 1.00

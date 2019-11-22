@@ -1,0 +1,1 @@
+The source code for the OpenGL files is in the tools folder, in the appropriate zip file. See that file for the details of the PyOpenGL package.

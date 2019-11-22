@@ -1,0 +1,23 @@
+#version 150
+
+uniform vec3 PlanePos;
+uniform vec3 eyePos;
+uniform samplerCube skybox;
+in vec3 v_out;
+
+in vec3 v_texcoord;
+in vec3 v_normal;
+in vec3 v_pw;
+
+out vec4 color;
+
+
+void main(){
+    vec3 V = v_out.xyz- eyePos.xyz;
+    V=normalize(V);
+
+    vec4 tc = texture(skybox,V);
+    
+    color=tc;
+}
+

@@ -1,0 +1,24 @@
+#version 150
+uniform sampler2D texture;
+uniform vec3 eyePos;
+uniform float alpha;
+
+//in float v_life;
+in vec2 g_texcoord;
+
+out vec4 color;
+
+void main(){
+
+    color = texture2D(texture, g_texcoord.xy);
+
+    //float alpha = mix(1.0, 0.0, clamp(1.0-/2.0,0.0,1.0));
+    
+    color.rgb = color.rgb;
+    color.a = alpha * color.a;
+//fixme
+//color = vec4(1,0,1,1);
+    
+
+    
+}

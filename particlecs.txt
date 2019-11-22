@@ -1,0 +1,29 @@
+#version 430
+struct Sphere{
+    vec4 center;
+    float radius;
+    vec4 color;
+    vec2 anisotropy;
+};
+struct ParticleData{
+    vec4 position;
+    vec4 velocity;
+};
+layout(local_size_x=64,local_size_y=1,local_size_z=1) in;
+layout (std430,binding=0) buffer Positions {
+    ParticleData particles[];
+};
+uniform float elapsed;
+uniform vec3 gravity;
+
+void main(){
+    vec3 my_id = gl_GlobalInvocationID;
+
+    //also have gl_WorkGroupID, gl_LocalInvocationID, gl_WorkGroupSize
+    //get global id:
+    uint idx = uint(my_id.x);
+    vec3 newpos = particles[idx].position.xyz + elapsed * particles[idx].velocity.xyz;
+    vec3 newvel = particles[idx].velocity.xyz + elapsed * gravity;
+    particles[idx].position.xyz = newpos;
+    particles[idx].velocity.xyz = newvel;
+}

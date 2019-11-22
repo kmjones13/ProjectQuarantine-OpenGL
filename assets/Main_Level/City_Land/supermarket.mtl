@@ -1,0 +1,58 @@
+# Blender MTL File: 'supermarket.blend'
+# Material Count: 4
+
+newmtl shop-small
+Ns 494.117647
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.354701 0.354701 0.354701
+Ke 0.024000 0.024000 0.024000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd C:\Dokumente und Einstellungen\KainEden\Desktop\supermarket texture\Kiosk.png
+map_Bump C:\\Users\\Kee\\AppData\\Local\\Temp\\7zO0F534015\\Shop.png
+map_Ks C:\\Users\\Kee\\AppData\\Local\\Temp\\7zO0F534015\\Shop.png
+map_d C:\\Users\\Kee\\AppData\\Local\\Temp\\7zO0F534015\\Shop.png
+
+newmtl shop-small_Shop.png
+Ns 492.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.354701 0.354701 0.354701
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd Shop.png
+map_Bump Shop.png
+map_Ks Shop.png
+map_d Shop.png
+
+newmtl shop-small_Shop.png_Kiosk.png.001
+Ns 492.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.354701 0.354701 0.354701
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd C:\Dokumente und Einstellungen\KainEden\Desktop\Kiosk.png
+map_Bump Shop.png
+map_Ks Shop.png
+map_d Shop.png
+
+newmtl shop-small_Shop.png_Shop.png.002
+Ns 492.156863
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.354701 0.354701 0.354701
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd Shop.png
+map_Bump Shop.png
+map_Ks Shop.png
+map_d Shop.png

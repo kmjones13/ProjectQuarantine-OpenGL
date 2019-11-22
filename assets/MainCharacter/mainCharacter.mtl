@@ -1,0 +1,122 @@
+newmtl Final1:Lambert_head_color
+illum 4
+Kd 0.32 0.32 0.32
+Ka 0.09 0.09 0.09
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Final1:lambert4SG
+illum 4
+Kd 0.46 0.00 1.00
+Ka 0.21 0.21 0.21
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Final1:lambert5SG
+illum 4
+Kd 0.01 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.40 0.40 0.40
+newmtl Final1:lambert9SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Hat.jpg
+Ni 1.00
+newmtl Final1:phong1SG
+illum 4
+Kd 0.01 0.00 0.31
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Final1:phong2SG
+illum 4
+Kd 0.02 0.02 0.02
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.48 0.48 0.48
+newmtl Final1:phong9SG
+illum 4
+Kd 0.12 0.12 0.12
+Ka 0.49 0.49 0.49
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.74 0.74 0.74
+Ns 0.00
+newmtl Final2:lambert4SG
+illum 4
+Kd 0.46 0.00 1.00
+Ka 0.21 0.21 0.21
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Final2:lambert5SG
+illum 4
+Kd 0.01 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.40 0.40 0.40
+newmtl Final2:lambert9SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Hat.jpg
+Ni 1.00
+newmtl Final2:phong1SG
+illum 4
+Kd 0.01 0.00 0.31
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Final2:phong2SG
+illum 4
+Kd 0.02 0.02 0.02
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.48 0.48 0.48
+newmtl Final2:phong9SG
+illum 4
+Kd 0.12 0.12 0.12
+Ka 0.49 0.49 0.49
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.74 0.74 0.74
+Ns 0.00
+newmtl Male_base:Material
+illum 4
+Kd 0.64 0.64 0.64
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert2SG
+illum 4
+Kd 0.74 0.45 0.24
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 0.00 0.00 0.35
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 18.00
